@@ -8,7 +8,8 @@
 
 #import "SHNewFeatureCell.h"
 
-#import "SHTabBarController.h"
+#import "SHAccountTools.h"
+#import "SHLaunchTools.h"
 
 @interface SHNewFeatureCell()
 
@@ -80,8 +81,11 @@
 
 // 进入主界面
 - (void)start {
-    SHTabBarController *tabBarController = [SHTabBarController new];
-    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarController;
+    //SHTabBarController *tabBarController = [SHTabBarController new];
+   
+    [SHLaunchTools launchFirstControllerWithWindow:[UIApplication sharedApplication].keyWindow];
+ 
+    //[UIApplication sharedApplication].keyWindow.rootViewController = tabBarController;
 }
 
 // 分享   // TODO: 单选按钮应该还有更好的方法

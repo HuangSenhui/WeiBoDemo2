@@ -32,6 +32,11 @@
 		8BB8FFA6227ECE0700930989 /* new_feature_finish_button_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB8FF9E227ECE0700930989 /* new_feature_finish_button_highlighted@2x.png */; };
 		8BB8FFA7227ECE0700930989 /* new_feature_2-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB8FF9F227ECE0700930989 /* new_feature_2-568h@2x.png */; };
 		8BB8FFA8227ECE0700930989 /* new_feature_finish_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB8FFA0227ECE0700930989 /* new_feature_finish_button@2x.png */; };
+		8BB8FFAD227F257100930989 /* SHLaunchTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFAC227F257100930989 /* SHLaunchTools.m */; };
+		8BB8FFB4227F2CD000930989 /* SHOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFB3227F2CD000930989 /* SHOAuthController.m */; };
+		8BB8FFB7227F356600930989 /* SHUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFB6227F356600930989 /* SHUserAccount.m */; };
+		8BB8FFBC227F425E00930989 /* SHHttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFBB227F425E00930989 /* SHHttpTools.m */; };
+		8BB8FFBF227F462000930989 /* SHAccountTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFBE227F462000930989 /* SHAccountTools.m */; };
 		B001F7CDEAAED8318708CD67 /* libPods-WeiBoDemo2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63961B66152C0FE5FA878289 /* libPods-WeiBoDemo2.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +103,16 @@
 		8BB8FF9E227ECE0700930989 /* new_feature_finish_button_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_feature_finish_button_highlighted@2x.png"; sourceTree = "<group>"; };
 		8BB8FF9F227ECE0700930989 /* new_feature_2-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_feature_2-568h@2x.png"; sourceTree = "<group>"; };
 		8BB8FFA0227ECE0700930989 /* new_feature_finish_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_feature_finish_button@2x.png"; sourceTree = "<group>"; };
+		8BB8FFAB227F257100930989 /* SHLaunchTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHLaunchTools.h; sourceTree = "<group>"; };
+		8BB8FFAC227F257100930989 /* SHLaunchTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHLaunchTools.m; sourceTree = "<group>"; };
+		8BB8FFB2227F2CD000930989 /* SHOAuthController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHOAuthController.h; sourceTree = "<group>"; };
+		8BB8FFB3227F2CD000930989 /* SHOAuthController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHOAuthController.m; sourceTree = "<group>"; };
+		8BB8FFB5227F356600930989 /* SHUserAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHUserAccount.h; sourceTree = "<group>"; };
+		8BB8FFB6227F356600930989 /* SHUserAccount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHUserAccount.m; sourceTree = "<group>"; };
+		8BB8FFBA227F425E00930989 /* SHHttpTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHHttpTools.h; sourceTree = "<group>"; };
+		8BB8FFBB227F425E00930989 /* SHHttpTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHHttpTools.m; sourceTree = "<group>"; };
+		8BB8FFBD227F462000930989 /* SHAccountTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAccountTools.h; sourceTree = "<group>"; };
+		8BB8FFBE227F462000930989 /* SHAccountTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHAccountTools.m; sourceTree = "<group>"; };
 		BF991B24CAD46AF519636084 /* Pods-WeiBoDemo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiBoDemo2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeiBoDemo2/Pods-WeiBoDemo2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +224,8 @@
 		8BB46D5D227DDC9D00C3359F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8BB8FFAE227F2C1800930989 /* OAuth */,
+				8BB8FFA9227F245100930989 /* Tools */,
 				8BB8FF8E227EC13500930989 /* NewFeature */,
 				8BB46D87227E055100C3359F /* Other */,
 				8BB46D5E227DDC9D00C3359F /* Home */,
@@ -459,6 +476,78 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		8BB8FFA9227F245100930989 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8FFB9227F41E500930989 /* HttpTools */,
+				8BB8FFB8227F415E00930989 /* Account */,
+				8BB8FFAA227F245E00930989 /* LaunchInterface */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		8BB8FFAA227F245E00930989 /* LaunchInterface */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8FFAB227F257100930989 /* SHLaunchTools.h */,
+				8BB8FFAC227F257100930989 /* SHLaunchTools.m */,
+			);
+			path = LaunchInterface;
+			sourceTree = "<group>";
+		};
+		8BB8FFAE227F2C1800930989 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8FFB0227F2C2D00930989 /* Controller */,
+				8BB8FFAF227F2C2400930989 /* Model */,
+				8BB8FFB1227F2C3800930989 /* View */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		8BB8FFAF227F2C2400930989 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8FFB5227F356600930989 /* SHUserAccount.h */,
+				8BB8FFB6227F356600930989 /* SHUserAccount.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8BB8FFB0227F2C2D00930989 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8FFB2227F2CD000930989 /* SHOAuthController.h */,
+				8BB8FFB3227F2CD000930989 /* SHOAuthController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8BB8FFB1227F2C3800930989 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8BB8FFB8227F415E00930989 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8FFBD227F462000930989 /* SHAccountTools.h */,
+				8BB8FFBE227F462000930989 /* SHAccountTools.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		8BB8FFB9227F41E500930989 /* HttpTools */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8FFBA227F425E00930989 /* SHHttpTools.h */,
+				8BB8FFBB227F425E00930989 /* SHHttpTools.m */,
+			);
+			path = HttpTools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -646,10 +735,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB46D8E227E09B600C3359F /* SHSubViewController.m in Sources */,
+				8BB8FFAD227F257100930989 /* SHLaunchTools.m in Sources */,
 				8BB46D7A227DE27200C3359F /* SHDiscoverViewController.m in Sources */,
 				8BB46D7D227DE28600C3359F /* SHMessageViewController.m in Sources */,
+				8BB8FFBF227F462000930989 /* SHAccountTools.m in Sources */,
 				8BA0D062227D8C83000AC0A3 /* WeiBoDemo2.xcdatamodeld in Sources */,
 				8BB46D77227DE25100C3359F /* SHHomeTableViewController.m in Sources */,
+				8BB8FFBC227F425E00930989 /* SHHttpTools.m in Sources */,
 				8BA0D06A227D8C84000AC0A3 /* main.m in Sources */,
 				8BB46D83227DEE3C00C3359F /* SHNavigationController.m in Sources */,
 				8BB46D74227DDF8B00C3359F /* SHTabBarController.m in Sources */,
@@ -658,6 +750,8 @@
 				8BB8FF97227ECA9400930989 /* SHNewFeatureCell.m in Sources */,
 				8BB8FF94227EC72000930989 /* SHNewFeatrureController.m in Sources */,
 				8BB46D80227DE29C00C3359F /* SHProfileViewController.m in Sources */,
+				8BB8FFB7227F356600930989 /* SHUserAccount.m in Sources */,
+				8BB8FFB4227F2CD000930989 /* SHOAuthController.m in Sources */,
 				8BB46D8B227E05C500C3359F /* UIBarButtonItem+SHBarButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
