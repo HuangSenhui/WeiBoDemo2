@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import "SHTabBarController.h"
+#import "SHNewFeatrureController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +19,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+//    SHTabBarController *tabBarController = [SHTabBarController new];
+    SHNewFeatrureController *newFeature = [SHNewFeatrureController new];
+    
+    self.window.rootViewController = newFeature;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
