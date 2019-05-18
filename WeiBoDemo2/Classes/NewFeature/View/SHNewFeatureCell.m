@@ -101,6 +101,7 @@ BOOL flage = NO;
 }
 
 - (void)setIndexPath:(NSIndexPath *)indexPath count:(int)count {
+    // 最后一页显示按钮，否则不显示
     if (indexPath.row == count - 1) {
         self.shareButton.hidden = NO;
         self.startButton.hidden = NO;

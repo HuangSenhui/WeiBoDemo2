@@ -30,6 +30,7 @@ static SHUserAccount *_account;
 + (SHUserAccount *)account {
     if (_account == nil) {
         _account = [NSKeyedUnarchiver unarchiveObjectWithFile:ACCOUNT_file];
+        // 授权过期设置
         NSInteger isExpires = 0;
         if(isExpires){
             _account = nil;

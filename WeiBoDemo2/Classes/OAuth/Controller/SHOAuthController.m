@@ -37,7 +37,7 @@
     webView.delegate = self;
     [self.view addSubview:webView];
     
-    // 设置请求，加载数据
+    // 设置请求参数，加载数据
     NSString *urlStr = [NSString stringWithFormat:@"%@?client_id=%@&redirect_uri=%@",SHbaseURL,SHClient_id,SHRedirect_uri];
     NSURL *requestURL = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:requestURL];
@@ -48,6 +48,7 @@
 #pragma mark - webView delegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
+    // 
     NSString *urlStr = request.URL.absoluteString;
     NSRange range = [urlStr rangeOfString:@"code="];
     
@@ -73,6 +74,9 @@
     [SHAccountTools getTokenWithCode:code success:^{
         // 进入主界面
         [SHLaunchTools launchFirstControllerWithWindow:[UIApplication sharedApplication].keyWindow];
+        // 这段代码写的不好，保存accessToken 和 进入主界面业务不能明确区分不方便理解理解和维护
+        // 1. 修改方法名称
+        // 2. 将授权后的业务分离出去
     } failure:^(NSError * _Nonnull error) {
         
     }];

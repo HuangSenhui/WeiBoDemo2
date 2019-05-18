@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B473D28228FACF6008AE76F /* SHOriginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B473D27228FACF6008AE76F /* SHOriginView.m */; };
+		8B473D2B228FB4E9008AE76F /* SHToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B473D2A228FB4E9008AE76F /* SHToolBarView.m */; };
+		8B473D2E22901074008AE76F /* SHPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B473D2D22901074008AE76F /* SHPhotosView.m */; };
+		8B473D312290117E008AE76F /* SHPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B473D302290117E008AE76F /* SHPhotoView.m */; };
+		8B473D3422904963008AE76F /* NSDate+NSDate_Blog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B473D3322904963008AE76F /* NSDate+NSDate_Blog.m */; };
+		8B473D37229055F4008AE76F /* SHRetweetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B473D36229055F4008AE76F /* SHRetweetView.m */; };
 		8BA0D059227D8C83000AC0A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA0D058227D8C83000AC0A3 /* AppDelegate.m */; };
 		8BA0D062227D8C83000AC0A3 /* WeiBoDemo2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BA0D060227D8C83000AC0A3 /* WeiBoDemo2.xcdatamodeld */; };
 		8BA0D064227D8C84000AC0A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BA0D063227D8C84000AC0A3 /* Assets.xcassets */; };
@@ -37,6 +43,12 @@
 		8BB8FFB7227F356600930989 /* SHUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFB6227F356600930989 /* SHUserAccount.m */; };
 		8BB8FFBC227F425E00930989 /* SHHttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFBB227F425E00930989 /* SHHttpTools.m */; };
 		8BB8FFBF227F462000930989 /* SHAccountTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFBE227F462000930989 /* SHAccountTools.m */; };
+		8BB8FFCA2281E36D00930989 /* SHStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFC92281E36D00930989 /* SHStatus.m */; };
+		8BB8FFCD2281E65D00930989 /* SHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFCC2281E65D00930989 /* SHUser.m */; };
+		8BB8FFD02281E7F700930989 /* SHPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFCF2281E7F700930989 /* SHPhoto.m */; };
+		8BB8FFD42281EACE00930989 /* SHStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFD32281EACE00930989 /* SHStatusFrame.m */; };
+		8BB8FFD72281FE6900930989 /* SHStatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFD62281FE6900930989 /* SHStatusTool.m */; };
+		8BB8FFDA2283324600930989 /* SHBlogTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFD92283324600930989 /* SHBlogTableCell.m */; };
 		B001F7CDEAAED8318708CD67 /* libPods-WeiBoDemo2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63961B66152C0FE5FA878289 /* libPods-WeiBoDemo2.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +72,18 @@
 /* Begin PBXFileReference section */
 		63961B66152C0FE5FA878289 /* libPods-WeiBoDemo2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeiBoDemo2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68A9D28CC63C493623153D96 /* Pods-WeiBoDemo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiBoDemo2.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeiBoDemo2/Pods-WeiBoDemo2.release.xcconfig"; sourceTree = "<group>"; };
+		8B473D26228FACF6008AE76F /* SHOriginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHOriginView.h; sourceTree = "<group>"; };
+		8B473D27228FACF6008AE76F /* SHOriginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHOriginView.m; sourceTree = "<group>"; };
+		8B473D29228FB4E9008AE76F /* SHToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHToolBarView.h; sourceTree = "<group>"; };
+		8B473D2A228FB4E9008AE76F /* SHToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHToolBarView.m; sourceTree = "<group>"; };
+		8B473D2C22901074008AE76F /* SHPhotosView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHPhotosView.h; sourceTree = "<group>"; };
+		8B473D2D22901074008AE76F /* SHPhotosView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHPhotosView.m; sourceTree = "<group>"; };
+		8B473D2F2290117E008AE76F /* SHPhotoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHPhotoView.h; sourceTree = "<group>"; };
+		8B473D302290117E008AE76F /* SHPhotoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHPhotoView.m; sourceTree = "<group>"; };
+		8B473D3222904963008AE76F /* NSDate+NSDate_Blog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSDate_Blog.h"; sourceTree = "<group>"; };
+		8B473D3322904963008AE76F /* NSDate+NSDate_Blog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSDate_Blog.m"; sourceTree = "<group>"; };
+		8B473D35229055F4008AE76F /* SHRetweetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHRetweetView.h; sourceTree = "<group>"; };
+		8B473D36229055F4008AE76F /* SHRetweetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHRetweetView.m; sourceTree = "<group>"; };
 		8BA0D054227D8C83000AC0A3 /* WeiBoDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBoDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA0D057227D8C83000AC0A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8BA0D058227D8C83000AC0A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,6 +137,18 @@
 		8BB8FFBB227F425E00930989 /* SHHttpTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHHttpTools.m; sourceTree = "<group>"; };
 		8BB8FFBD227F462000930989 /* SHAccountTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAccountTools.h; sourceTree = "<group>"; };
 		8BB8FFBE227F462000930989 /* SHAccountTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHAccountTools.m; sourceTree = "<group>"; };
+		8BB8FFC82281E36D00930989 /* SHStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHStatus.h; sourceTree = "<group>"; };
+		8BB8FFC92281E36D00930989 /* SHStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHStatus.m; sourceTree = "<group>"; };
+		8BB8FFCB2281E65D00930989 /* SHUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHUser.h; sourceTree = "<group>"; };
+		8BB8FFCC2281E65D00930989 /* SHUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHUser.m; sourceTree = "<group>"; };
+		8BB8FFCE2281E7F700930989 /* SHPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHPhoto.h; sourceTree = "<group>"; };
+		8BB8FFCF2281E7F700930989 /* SHPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHPhoto.m; sourceTree = "<group>"; };
+		8BB8FFD22281EACE00930989 /* SHStatusFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHStatusFrame.h; sourceTree = "<group>"; };
+		8BB8FFD32281EACE00930989 /* SHStatusFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHStatusFrame.m; sourceTree = "<group>"; };
+		8BB8FFD52281FE6900930989 /* SHStatusTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHStatusTool.h; sourceTree = "<group>"; };
+		8BB8FFD62281FE6900930989 /* SHStatusTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHStatusTool.m; sourceTree = "<group>"; };
+		8BB8FFD82283324600930989 /* SHBlogTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHBlogTableCell.h; sourceTree = "<group>"; };
+		8BB8FFD92283324600930989 /* SHBlogTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHBlogTableCell.m; sourceTree = "<group>"; };
 		BF991B24CAD46AF519636084 /* Pods-WeiBoDemo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiBoDemo2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeiBoDemo2/Pods-WeiBoDemo2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +195,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8B473D24228FABAD008AE76F /* SubController */ = {
+			isa = PBXGroup;
+			children = (
+				8BB46D8C227E09B600C3359F /* SHSubViewController.h */,
+				8BB46D8D227E09B600C3359F /* SHSubViewController.m */,
+			);
+			path = SubController;
+			sourceTree = "<group>";
+		};
+		8B473D25228FACA1008AE76F /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				8B473D26228FACF6008AE76F /* SHOriginView.h */,
+				8B473D27228FACF6008AE76F /* SHOriginView.m */,
+				8B473D29228FB4E9008AE76F /* SHToolBarView.h */,
+				8B473D2A228FB4E9008AE76F /* SHToolBarView.m */,
+				8B473D2C22901074008AE76F /* SHPhotosView.h */,
+				8B473D2D22901074008AE76F /* SHPhotosView.m */,
+				8B473D2F2290117E008AE76F /* SHPhotoView.h */,
+				8B473D302290117E008AE76F /* SHPhotoView.m */,
+				8B473D35229055F4008AE76F /* SHRetweetView.h */,
+				8B473D36229055F4008AE76F /* SHRetweetView.m */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
 		8BA0D04B227D8C83000AC0A3 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +249,7 @@
 				8BB46D5D227DDC9D00C3359F /* Classes */,
 				8BA0D057227D8C83000AC0A3 /* AppDelegate.h */,
 				8BA0D058227D8C83000AC0A3 /* AppDelegate.m */,
+				8BA0D063227D8C84000AC0A3 /* Assets.xcassets */,
 				8BB46C1E227DC6F800C3359F /* Surport Files */,
 			);
 			path = WeiBoDemo2;
@@ -213,7 +276,6 @@
 		8BB46C1E227DC6F800C3359F /* Surport Files */ = {
 			isa = PBXGroup;
 			children = (
-				8BA0D063227D8C84000AC0A3 /* Assets.xcassets */,
 				8BA0D068227D8C84000AC0A3 /* Info.plist */,
 				8BA0D069227D8C84000AC0A3 /* main.m */,
 				8BA0D060227D8C83000AC0A3 /* WeiBoDemo2.xcdatamodeld */,
@@ -250,10 +312,9 @@
 		8BB46D5F227DDC9D00C3359F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8B473D24228FABAD008AE76F /* SubController */,
 				8BB46D75227DE25100C3359F /* SHHomeTableViewController.h */,
 				8BB46D76227DE25100C3359F /* SHHomeTableViewController.m */,
-				8BB46D8C227E09B600C3359F /* SHSubViewController.h */,
-				8BB46D8D227E09B600C3359F /* SHSubViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +322,13 @@
 		8BB46D60227DDC9D00C3359F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BB8FFD12281EA9A00930989 /* ViewModel */,
+				8BB8FFC82281E36D00930989 /* SHStatus.h */,
+				8BB8FFC92281E36D00930989 /* SHStatus.m */,
+				8BB8FFCB2281E65D00930989 /* SHUser.h */,
+				8BB8FFCC2281E65D00930989 /* SHUser.m */,
+				8BB8FFCE2281E7F700930989 /* SHPhoto.h */,
+				8BB8FFCF2281E7F700930989 /* SHPhoto.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,6 +336,9 @@
 		8BB46D61227DDC9D00C3359F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8B473D25228FACA1008AE76F /* SubView */,
+				8BB8FFD82283324600930989 /* SHBlogTableCell.h */,
+				8BB8FFD92283324600930989 /* SHBlogTableCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -421,6 +492,8 @@
 			children = (
 				8BB46D89227E05C500C3359F /* UIBarButtonItem+SHBarButton.h */,
 				8BB46D8A227E05C500C3359F /* UIBarButtonItem+SHBarButton.m */,
+				8B473D3222904963008AE76F /* NSDate+NSDate_Blog.h */,
+				8B473D3322904963008AE76F /* NSDate+NSDate_Blog.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -544,8 +617,19 @@
 			children = (
 				8BB8FFBA227F425E00930989 /* SHHttpTools.h */,
 				8BB8FFBB227F425E00930989 /* SHHttpTools.m */,
+				8BB8FFD52281FE6900930989 /* SHStatusTool.h */,
+				8BB8FFD62281FE6900930989 /* SHStatusTool.m */,
 			);
 			path = HttpTools;
+			sourceTree = "<group>";
+		};
+		8BB8FFD12281EA9A00930989 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8BB8FFD22281EACE00930989 /* SHStatusFrame.h */,
+				8BB8FFD32281EACE00930989 /* SHStatusFrame.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -735,22 +819,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB46D8E227E09B600C3359F /* SHSubViewController.m in Sources */,
+				8B473D28228FACF6008AE76F /* SHOriginView.m in Sources */,
 				8BB8FFAD227F257100930989 /* SHLaunchTools.m in Sources */,
 				8BB46D7A227DE27200C3359F /* SHDiscoverViewController.m in Sources */,
 				8BB46D7D227DE28600C3359F /* SHMessageViewController.m in Sources */,
+				8B473D3422904963008AE76F /* NSDate+NSDate_Blog.m in Sources */,
+				8B473D2B228FB4E9008AE76F /* SHToolBarView.m in Sources */,
+				8BB8FFCA2281E36D00930989 /* SHStatus.m in Sources */,
 				8BB8FFBF227F462000930989 /* SHAccountTools.m in Sources */,
+				8B473D2E22901074008AE76F /* SHPhotosView.m in Sources */,
+				8BB8FFD72281FE6900930989 /* SHStatusTool.m in Sources */,
 				8BA0D062227D8C83000AC0A3 /* WeiBoDemo2.xcdatamodeld in Sources */,
+				8BB8FFCD2281E65D00930989 /* SHUser.m in Sources */,
 				8BB46D77227DE25100C3359F /* SHHomeTableViewController.m in Sources */,
 				8BB8FFBC227F425E00930989 /* SHHttpTools.m in Sources */,
+				8BB8FFD42281EACE00930989 /* SHStatusFrame.m in Sources */,
 				8BA0D06A227D8C84000AC0A3 /* main.m in Sources */,
 				8BB46D83227DEE3C00C3359F /* SHNavigationController.m in Sources */,
+				8B473D37229055F4008AE76F /* SHRetweetView.m in Sources */,
 				8BB46D74227DDF8B00C3359F /* SHTabBarController.m in Sources */,
 				8BA0D059227D8C83000AC0A3 /* AppDelegate.m in Sources */,
 				8BB46D86227DF32400C3359F /* SHTabBar.m in Sources */,
 				8BB8FF97227ECA9400930989 /* SHNewFeatureCell.m in Sources */,
 				8BB8FF94227EC72000930989 /* SHNewFeatrureController.m in Sources */,
+				8BB8FFD02281E7F700930989 /* SHPhoto.m in Sources */,
 				8BB46D80227DE29C00C3359F /* SHProfileViewController.m in Sources */,
 				8BB8FFB7227F356600930989 /* SHUserAccount.m in Sources */,
+				8B473D312290117E008AE76F /* SHPhotoView.m in Sources */,
+				8BB8FFDA2283324600930989 /* SHBlogTableCell.m in Sources */,
 				8BB8FFB4227F2CD000930989 /* SHOAuthController.m in Sources */,
 				8BB46D8B227E05C500C3359F /* UIBarButtonItem+SHBarButton.m in Sources */,
 			);

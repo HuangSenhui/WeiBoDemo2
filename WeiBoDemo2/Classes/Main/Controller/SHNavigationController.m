@@ -62,6 +62,9 @@
     [self popToRootViewControllerAnimated:YES];
 }
 
+// TODO: 当前项目结构：子界面都不显示tabBarController,所以此处编码可优化
+// 1. 当前：UIWindow -> TabBarController -> 多个NavigationController
+// 2. 优化：UIWindow -> NavigationController -> TabBarController -> 多个ViewController
 // 滑动返回手势
 -(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (viewController == self.viewControllers[0]) {
