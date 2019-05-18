@@ -61,7 +61,7 @@
 }
 
 -(void) setupChildViewController:(UIViewController *)vc title:(NSString *)title imgName:(NSString *)imageName selectedImgName:(NSString *)selectedIamgeName {
-    vc.title = title;
+    vc.tabBarItem.title = title;
     // 使用原图显示
     vc.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedIamgeName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

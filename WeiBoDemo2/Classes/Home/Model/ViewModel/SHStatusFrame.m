@@ -87,15 +87,18 @@
 
 - (CGSize)photoSizeWithCount:(int)count {
     
-    int column = (count == 4 ? 2 : 3);  // 4张图时，两列显示，其他均为3列显示
+    CGFloat margin = 10;
+    CGFloat photoMargin = 5;
+    
+    int column = (count == 4 ? 2 : 3);  // 4张图时，显示2列，其他均为显示3列
     int row = (count - 1) / column + 1; // 行数 = 总数 / 列数 + 1
     
     // 图片显示尺寸
-    CGFloat photoSize = 80;
+    CGFloat photoSize = ([UIScreen mainScreen].bounds.size.width - 2 * margin - 2 * photoMargin) / 3;
     
     // 配图显示的size
-    CGFloat pW = column * photoSize + (column - 1) * 5;
-    CGFloat pH = column * photoSize + (row - 1) * 5;
+    CGFloat pW = column * photoSize + (column - 1) * photoMargin;    // 图片宽度 * 数量 + 总间距
+    CGFloat pH = row * photoSize + (row - 1) * photoMargin;
     
     return CGSizeMake(pW, pH);
 }

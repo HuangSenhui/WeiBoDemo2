@@ -37,7 +37,8 @@
     [super layoutSubviews];
     
     CGFloat supFrameW = self.bounds.size.width;
-    CGFloat supFrameH = self.bounds.size.height;
+    // 适配iPhoneX
+    CGFloat supFrameH = 48; // self.bounds.size.height;
     
     CGFloat btnX = 0;
     CGFloat btnY = 0;

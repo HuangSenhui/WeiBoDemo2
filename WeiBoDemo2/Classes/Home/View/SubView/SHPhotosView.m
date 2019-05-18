@@ -4,7 +4,7 @@
 //
 //  Created by HuangSenhui on 2019/5/18.
 //  Copyright © 2019 HuangSenhui. All rights reserved.
-//
+//  优化：优化图片显示，自适应屏幕宽度，均分显示
 
 #import "SHPhotosView.h"
 
@@ -17,7 +17,7 @@
     if (self) {
         [self setupSubViews];
         
-        self.backgroundColor = [UIColor cyanColor];
+        //self.backgroundColor = [UIColor cyanColor];
     }
     return self;
 }
@@ -51,13 +51,13 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    CGFloat photoMargin = 5;
     
-    CGFloat x = 0;
-    CGFloat y = 0;
-    CGFloat w = 80;
-    CGFloat h = 80;
+    CGFloat photoX = 0;
+    CGFloat photoY = 0;
+    CGFloat photoW = ([UIScreen mainScreen].bounds.size.width - 20 - 2 * photoMargin) / 3;    // 20  = 2倍cell的margin
+    CGFloat photoH = photoW;
     
-    CGFloat margin = 5;
     
     int photoCount = (int)_pic_urls.count;
     int column = 0;
@@ -70,10 +70,10 @@
         row = i / actualColumn;
         
         UIImageView *imgView = self.subviews[i];
-        x = column * (w + margin);
-        y = row * (h + margin);
+        photoX = column * (photoW + photoMargin);
+        photoY = row * (photoH + photoMargin);
         
-        imgView.frame = CGRectMake(x, y, w, h);
+        imgView.frame = CGRectMake(photoX, photoY, photoW, photoH);
     }
 }
 
