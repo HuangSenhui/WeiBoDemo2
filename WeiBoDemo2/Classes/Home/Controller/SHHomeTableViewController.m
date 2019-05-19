@@ -7,7 +7,7 @@
 //
 //  Created by HuangSenhui on 2019/5/4.
 //  Copyright © 2019 HuangSenhui. All rights reserved.
-//  TODO: BUG：1.部分text没有换行显示，2.图片显示区域没有按实际数量显示，默认占据9张图的位置。3. TabBar 文字显示在 IphoneXs 上异常。
+//  TODO: BUG：1.部分text没有换行显示，2.图片显示区域没有按实际数量显示，默认占据9张图的位置。3. TabBar 文字显示在 IphoneXs 上异常。- 2019.05.19
 
 #import "SHHomeTableViewController.h"
 
