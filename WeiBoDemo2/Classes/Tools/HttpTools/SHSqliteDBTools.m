@@ -44,17 +44,10 @@ static FMDatabase *_db;
 + (NSArray *)readStatusWithParam:(NSDictionary *)param {
     NSString *accessToken = [SHAccountTools account].access_token;
     NSString *sqlSTM = [NSString stringWithFormat:@"select * from statuses where access_token = '%@' order by idstr desc limit 20",accessToken];
-    /*
-    if (param) {    // since_id 有参数 表示用户请求新数据，本地肯定没有
-        sqlSTM =[NSString stringWithFormat:@"select * from statuses where id = -1 "];   // 0 条数据
-    } else  */
-    /**
-     TODO:
-     BUG：app 第一次打开时，控制器没有数据，每次都会向服务器请求20条数据。
-     方案-：将数据库idstr 单独保存，使每次请求都是获取最新的微博数据
-     方案二：启动app就查询数据库
-     */
-    if (param[@"max_id"]){ // max_id
+   
+    if (param[@"since_id"]) {    // since_id 有参数 
+        sqlSTM =[NSString stringWithFormat:@"select * from statuses where access_token = '%@' and idstr > '%@' order by idstr desc limit 20",accessToken,param[@"since_id"]];   // 0 条数据
+    } else if (param[@"max_id"]){ // max_id
         sqlSTM =[NSString stringWithFormat:@"select * from statuses where access_token = '%@' and idstr < %@ order by idstr desc limit 20",accessToken,param[@"max_id"]];
     }
     

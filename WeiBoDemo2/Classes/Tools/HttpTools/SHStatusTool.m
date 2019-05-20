@@ -33,6 +33,7 @@
     NSArray *statues = [SHSqliteDBTools readStatusWithParam:params];
     if (statues.count) {
         if (success) success(statues);
+        // 阻止微博刷新数量条显示 ？？？
         return;
     }
     

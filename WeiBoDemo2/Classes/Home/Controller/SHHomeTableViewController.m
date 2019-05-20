@@ -17,12 +17,13 @@
 #import "SHStatusFrame.h"
 #import "SHStatusTool.h"
 #import "SHBlogTableCell.h"
+#import "SHNavigationController.h"
 
 #import <MJRefresh.h>
 
 @interface SHHomeTableViewController ()
 
-@property (nonatomic,strong) NSMutableArray *statusFrames;
+@property (nonatomic,strong) NSMutableArray<SHStatusFrame *> *statusFrames;
 
 @end
 
@@ -39,7 +40,7 @@
     
     // 下拉刷新
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(requestStatus)];
-    //[self.tableView.mj_header beginRefreshing];   // 进入页面自动刷新
+    [self.tableView.mj_header beginRefreshing];   // 进入页面自动刷新
     
     // 上拉加载更多
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreStatus)];
@@ -72,11 +73,19 @@
     return cell;
 }
 
+#pragma mark - tabview delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     SHStatusFrame *frame = self.statusFrames[indexPath.row];
     return frame.cellHight;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SHSubViewController *subVC = [SHSubViewController new];
+    subVC.navigationItem.title = _statusFrames[indexPath.row].status.user.name;
+    subVC.view.backgroundColor = [UIColor orangeColor];
+    
+    [self.navigationController pushViewController:subVC animated:YES];
+}
 
 #pragma mark - Navigation
 
@@ -107,6 +116,7 @@
 - (void)requestStatus {
     // 将微博数据请求抽取剥离到工具类
     // 处理微博标识idstr 可以用来区分最是否为数据
+    
     NSString *sinceId = nil;
     if (self.statusFrames.count) {
         SHStatus *status = [self.statusFrames[0] status];

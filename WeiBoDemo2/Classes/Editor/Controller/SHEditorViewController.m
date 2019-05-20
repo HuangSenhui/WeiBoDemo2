@@ -85,7 +85,7 @@
     editorView.font = [UIFont systemFontOfSize:16];
     // 默认允许垂直方向拖拽
     editorView.alwaysBounceVertical = YES;
-    editorView.returnKeyType = UIReturnKeyDone;
+    
     editorView.delegate = self;
     _editorView = editorView;
 }
