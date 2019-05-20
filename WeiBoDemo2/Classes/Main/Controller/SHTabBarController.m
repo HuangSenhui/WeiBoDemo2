@@ -12,11 +12,12 @@
 #import "SHDiscoverViewController.h"
 #import "SHMessageViewController.h"
 #import "SHProfileViewController.h"
+#import "SHEditorViewController.h"
 
 #import "SHNavigationController.h"
 #import "SHTabBar.h"
 
-@interface SHTabBarController ()
+@interface SHTabBarController () <SHTabBarDelegate>
 
 @property (nonatomic,weak) SHHomeTableViewController    *home;
 @property (nonatomic,weak) SHMessageViewController      *message;
@@ -80,6 +81,15 @@
 -(void)setupTabBar {
     SHTabBar *tabBar = [[SHTabBar alloc] initWithFrame:self.tabBar.frame];
     [self setValue:tabBar forKey:@"tabBar"];
+}
+
+#pragma mark - 加号 跳转界面
+- (void)tabBar:(UITabBar *)tabBar didClickPlusButton:(UIButton *)button {
+    //NSLog(@"+ click +");
+    SHEditorViewController *editorViewController = [[SHEditorViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:editorViewController];
+    
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 @end

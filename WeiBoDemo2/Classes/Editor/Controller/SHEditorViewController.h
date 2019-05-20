@@ -1,8 +1,8 @@
 //
-//  SHTabBarController.h
+//  SHEditorViewController.h
 //  WeiBoDemo2
 //
-//  Created by HuangSenhui on 2019/5/4.
+//  Created by HuangSenhui on 2019/5/19.
 //  Copyright © 2019 HuangSenhui. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SHTabBarController : UITabBarController 
+@interface SHEditorViewController : UIViewController
 
 @end
 

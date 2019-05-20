@@ -4,7 +4,7 @@
 //
 //  Created by HuangSenhui on 2019/5/8.
 //  Copyright © 2019 HuangSenhui. All rights reserved.
-//
+//  微博API文档：https://open.weibo.com/wiki/2/statuses/home_timeline
 
 #import <Foundation/Foundation.h>
 

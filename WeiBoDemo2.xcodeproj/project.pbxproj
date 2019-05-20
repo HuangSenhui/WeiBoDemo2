@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B3BDE6F2292AD2A00BE28ED /* SHSqliteDBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BDE6E2292AD2A00BE28ED /* SHSqliteDBTools.m */; };
 		8B473D28228FACF6008AE76F /* SHOriginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B473D27228FACF6008AE76F /* SHOriginView.m */; };
 		8B473D2B228FB4E9008AE76F /* SHToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B473D2A228FB4E9008AE76F /* SHToolBarView.m */; };
 		8B473D2E22901074008AE76F /* SHPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B473D2D22901074008AE76F /* SHPhotosView.m */; };
@@ -49,6 +50,9 @@
 		8BB8FFD42281EACE00930989 /* SHStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFD32281EACE00930989 /* SHStatusFrame.m */; };
 		8BB8FFD72281FE6900930989 /* SHStatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFD62281FE6900930989 /* SHStatusTool.m */; };
 		8BB8FFDA2283324600930989 /* SHBlogTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8FFD92283324600930989 /* SHBlogTableCell.m */; };
+		8BC92CE52291BBB60066F48A /* SHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC92CE42291BBB60066F48A /* SHTextView.m */; };
+		8BC92CE82291DBB70066F48A /* SHSendBlog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC92CE72291DBB70066F48A /* SHSendBlog.m */; };
+		8BFBF4A12291A52F004DF3A2 /* SHEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFBF4A02291A52F004DF3A2 /* SHEditorViewController.m */; };
 		B001F7CDEAAED8318708CD67 /* libPods-WeiBoDemo2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63961B66152C0FE5FA878289 /* libPods-WeiBoDemo2.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,8 @@
 /* Begin PBXFileReference section */
 		63961B66152C0FE5FA878289 /* libPods-WeiBoDemo2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeiBoDemo2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68A9D28CC63C493623153D96 /* Pods-WeiBoDemo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiBoDemo2.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeiBoDemo2/Pods-WeiBoDemo2.release.xcconfig"; sourceTree = "<group>"; };
+		8B3BDE6D2292AD2A00BE28ED /* SHSqliteDBTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSqliteDBTools.h; sourceTree = "<group>"; };
+		8B3BDE6E2292AD2A00BE28ED /* SHSqliteDBTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSqliteDBTools.m; sourceTree = "<group>"; };
 		8B473D26228FACF6008AE76F /* SHOriginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHOriginView.h; sourceTree = "<group>"; };
 		8B473D27228FACF6008AE76F /* SHOriginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHOriginView.m; sourceTree = "<group>"; };
 		8B473D29228FB4E9008AE76F /* SHToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHToolBarView.h; sourceTree = "<group>"; };
@@ -149,6 +155,12 @@
 		8BB8FFD62281FE6900930989 /* SHStatusTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHStatusTool.m; sourceTree = "<group>"; };
 		8BB8FFD82283324600930989 /* SHBlogTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHBlogTableCell.h; sourceTree = "<group>"; };
 		8BB8FFD92283324600930989 /* SHBlogTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHBlogTableCell.m; sourceTree = "<group>"; };
+		8BC92CE32291BBB60066F48A /* SHTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHTextView.h; sourceTree = "<group>"; };
+		8BC92CE42291BBB60066F48A /* SHTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHTextView.m; sourceTree = "<group>"; };
+		8BC92CE62291DBB70066F48A /* SHSendBlog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSendBlog.h; sourceTree = "<group>"; };
+		8BC92CE72291DBB70066F48A /* SHSendBlog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHSendBlog.m; sourceTree = "<group>"; };
+		8BFBF49F2291A52F004DF3A2 /* SHEditorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHEditorViewController.h; sourceTree = "<group>"; };
+		8BFBF4A02291A52F004DF3A2 /* SHEditorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHEditorViewController.m; sourceTree = "<group>"; };
 		BF991B24CAD46AF519636084 /* Pods-WeiBoDemo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeiBoDemo2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeiBoDemo2/Pods-WeiBoDemo2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -286,6 +298,7 @@
 		8BB46D5D227DDC9D00C3359F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8BFBF49B2291A4CC004DF3A2 /* Editor */,
 				8BB8FFAE227F2C1800930989 /* OAuth */,
 				8BB8FFA9227F245100930989 /* Tools */,
 				8BB8FF8E227EC13500930989 /* NewFeature */,
@@ -619,6 +632,10 @@
 				8BB8FFBB227F425E00930989 /* SHHttpTools.m */,
 				8BB8FFD52281FE6900930989 /* SHStatusTool.h */,
 				8BB8FFD62281FE6900930989 /* SHStatusTool.m */,
+				8BC92CE62291DBB70066F48A /* SHSendBlog.h */,
+				8BC92CE72291DBB70066F48A /* SHSendBlog.m */,
+				8B3BDE6D2292AD2A00BE28ED /* SHSqliteDBTools.h */,
+				8B3BDE6E2292AD2A00BE28ED /* SHSqliteDBTools.m */,
 			);
 			path = HttpTools;
 			sourceTree = "<group>";
@@ -630,6 +647,41 @@
 				8BB8FFD32281EACE00930989 /* SHStatusFrame.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8BFBF49B2291A4CC004DF3A2 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				8BFBF49E2291A4F3004DF3A2 /* Controller */,
+				8BFBF49D2291A4ED004DF3A2 /* View */,
+				8BFBF49C2291A4E5004DF3A2 /* Model */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		8BFBF49C2291A4E5004DF3A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8BFBF49D2291A4ED004DF3A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BC92CE32291BBB60066F48A /* SHTextView.h */,
+				8BC92CE42291BBB60066F48A /* SHTextView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8BFBF49E2291A4F3004DF3A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BFBF49F2291A52F004DF3A2 /* SHEditorViewController.h */,
+				8BFBF4A02291A52F004DF3A2 /* SHEditorViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -818,12 +870,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3BDE6F2292AD2A00BE28ED /* SHSqliteDBTools.m in Sources */,
 				8BB46D8E227E09B600C3359F /* SHSubViewController.m in Sources */,
 				8B473D28228FACF6008AE76F /* SHOriginView.m in Sources */,
 				8BB8FFAD227F257100930989 /* SHLaunchTools.m in Sources */,
 				8BB46D7A227DE27200C3359F /* SHDiscoverViewController.m in Sources */,
 				8BB46D7D227DE28600C3359F /* SHMessageViewController.m in Sources */,
 				8B473D3422904963008AE76F /* NSDate+NSDate_Blog.m in Sources */,
+				8BC92CE82291DBB70066F48A /* SHSendBlog.m in Sources */,
 				8B473D2B228FB4E9008AE76F /* SHToolBarView.m in Sources */,
 				8BB8FFCA2281E36D00930989 /* SHStatus.m in Sources */,
 				8BB8FFBF227F462000930989 /* SHAccountTools.m in Sources */,
@@ -832,12 +886,14 @@
 				8BA0D062227D8C83000AC0A3 /* WeiBoDemo2.xcdatamodeld in Sources */,
 				8BB8FFCD2281E65D00930989 /* SHUser.m in Sources */,
 				8BB46D77227DE25100C3359F /* SHHomeTableViewController.m in Sources */,
+				8BC92CE52291BBB60066F48A /* SHTextView.m in Sources */,
 				8BB8FFBC227F425E00930989 /* SHHttpTools.m in Sources */,
 				8BB8FFD42281EACE00930989 /* SHStatusFrame.m in Sources */,
 				8BA0D06A227D8C84000AC0A3 /* main.m in Sources */,
 				8BB46D83227DEE3C00C3359F /* SHNavigationController.m in Sources */,
 				8B473D37229055F4008AE76F /* SHRetweetView.m in Sources */,
 				8BB46D74227DDF8B00C3359F /* SHTabBarController.m in Sources */,
+				8BFBF4A12291A52F004DF3A2 /* SHEditorViewController.m in Sources */,
 				8BA0D059227D8C83000AC0A3 /* AppDelegate.m in Sources */,
 				8BB46D86227DF32400C3359F /* SHTabBar.m in Sources */,
 				8BB8FF97227ECA9400930989 /* SHNewFeatureCell.m in Sources */,

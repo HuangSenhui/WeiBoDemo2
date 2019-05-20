@@ -7,5 +7,6 @@ pod 'SDWebImage'
 pod 'MBProgressHUD'
 pod 'MJRefresh'
 pod 'MJExtension'
+pod 'FMDB'
 
 end

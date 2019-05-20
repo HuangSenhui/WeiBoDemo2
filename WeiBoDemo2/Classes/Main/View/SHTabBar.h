@@ -10,9 +10,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SHTabBar : UITabBar
+//@protocol SHTabBarDelegate;
+@class SHTabBar;
+@protocol SHTabBarDelegate <NSObject,UITabBarDelegate>
 
+@optional
+- (void)tabBar:(UITabBar *)tabBar didClickPlusButton:(UIButton *)button;    // TODO:也许还需要获取按钮本身的属性 进行一些操作。 后续优化
 
 @end
+
+@interface SHTabBar : UITabBar
+
+@property (nonatomic,weak) id<SHTabBarDelegate> delegate;
+
+@end
+
+
 
 NS_ASSUME_NONNULL_END

@@ -16,6 +16,15 @@
 
 @implementation SHTabBar
 
+@dynamic delegate;
+
+//- (id<UITabBarDelegate>)delegate {
+//    return [super delegate];
+//}
+//- (void)setDelegate:(id<UITabBarDelegate>)delegate {
+//    [super setDelegate:delegate];
+//}
+
 -(UIButton *)button {
     if (_button == nil) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -26,7 +35,7 @@
         [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateSelected];
         
         [btn sizeToFit];
-        
+    
         _button = btn;
         [self addSubview:_button];
     }
@@ -56,6 +65,17 @@
     }
     
     self.button.center = CGPointMake(supFrameW / 2, supFrameH / 2);
+    
+    // 添加点击事件
+    [self.button addTarget:self action:@selector(plusButtonClick) forControlEvents:UIControlEventTouchUpInside];
+}
+
+#pragma mark - 按钮点击事件
+- (void)plusButtonClick {
+    
+    if ([self.delegate respondsToSelector:@selector(tabBar:didClickPlusButton:)]) {
+        [self.delegate tabBar:self didClickPlusButton:[UIButton new]];
+    }
 }
 
 @end

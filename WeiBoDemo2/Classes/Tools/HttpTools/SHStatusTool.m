@@ -12,6 +12,8 @@
 #import "SHAccountTools.h"
 #import "SHStatus.h"
 
+#import "SHSqliteDBTools.h"
+
 #import <MJExtension.h>
 
 @implementation SHStatusTool
@@ -26,6 +28,14 @@
     if (sinceId) {
         params[@"since_id"] = sinceId;
     }
+    
+    // 从数据库读取微博数据，更具参数来判断来取数据
+    NSArray *statues = [SHSqliteDBTools readStatusWithParam:params];
+    if (statues.count) {
+        if (success) success(statues);
+        return;
+    }
+    
     NSString *homeurl = @"https://api.weibo.com/2/statuses/home_timeline.json";
     [SHHttpTools GET:homeurl parameters:params success:^(id responseObject) {
         NSArray *dicArr = responseObject[@"statuses"];
@@ -33,6 +43,9 @@
         if (success) {
             success(statuses);
         }
+        // 将新的数据保存到数据库
+        [SHSqliteDBTools saveWithStatuses:responseObject[@"statuses"]];
+        
     } failure:^(NSError * _Nonnull error) {
         if (failure) {
             failure(error);
@@ -50,13 +63,25 @@
     if (maxId) {
         params[@"max_id"] = maxId;
     }
+    
+    // 从数据库读取数据
+    NSArray *statues = [SHSqliteDBTools readStatusWithParam:params];
+    if (statues.count) {
+        if (success) success(statues);
+        return;
+    }
+    
     NSString *homeurl = @"https://api.weibo.com/2/statuses/home_timeline.json";
-    [SHHttpTools GET:homeurl parameters:params success:^(id  _Nullable responseObject) {
+    [SHHttpTools GET:homeurl parameters:params success:^(id responseObject) {
         NSArray *dicArr = responseObject[@"statuses"];
         NSArray *statuses = [SHStatus mj_objectArrayWithKeyValuesArray:dicArr];
         if (success) {
             success(statuses);
         }
+        
+        // 保存到数据库
+        [SHSqliteDBTools saveWithStatuses:responseObject[@"statuses"]];
+        
     } failure:^(NSError * _Nonnull error) {
         if (failure) {
             failure(error);

@@ -39,7 +39,7 @@
     
     // 下拉刷新
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(requestStatus)];
-    [self.tableView.mj_header beginRefreshing];
+    //[self.tableView.mj_header beginRefreshing];   // 进入页面自动刷新
     
     // 上拉加载更多
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreStatus)];
@@ -77,6 +77,7 @@
     return frame.cellHight;
 }
 
+
 #pragma mark - Navigation
 
 - (void)setupNavigationBar {
@@ -105,7 +106,7 @@
 #pragma mark - 微博数据
 - (void)requestStatus {
     // 将微博数据请求抽取剥离到工具类
-    // 处理微博标识
+    // 处理微博标识idstr 可以用来区分最是否为数据
     NSString *sinceId = nil;
     if (self.statusFrames.count) {
         SHStatus *status = [self.statusFrames[0] status];
@@ -115,7 +116,8 @@
     [SHStatusTool newStatusWithSinceId:sinceId success:^(NSArray * _Nonnull statuses) {
         // 结束刷新控件
         [self.tableView.mj_header endRefreshing];
-        
+        // 展示提示条
+        [self showStatusCount:(int)statuses.count];
         // 模型转换
         NSMutableArray *statusFrame = [NSMutableArray array];
         for (SHStatus *status in statuses) {
@@ -129,12 +131,73 @@
         
         // 刷新表格数据
         [self.tableView reloadData];
-    } failure:^(NSError * _Nonnull err) {
-        NSLog(@"微博数据异常");
+    } failure:^(NSError *err) {
+        
+        NSLog(@"服务器数据出错");
     }];
 }
 
+// 加载更多数据
 - (void)loadMoreStatus {
+    NSString *max_id = nil;
+    if (self.statusFrames.count) {
+        SHStatus *status = [[self.statusFrames lastObject] status];
+        long maxid = [status.idstr longLongValue] - 1;  // 去掉请求重复数据
+        max_id = [NSString stringWithFormat:@"%ld",maxid];
+    }
     
+    [SHStatusTool moreStatusWithMaxId:max_id success:^(NSArray *statuses) {
+        // 结束上拉刷新
+        [self.tableView.mj_footer endRefreshing];
+        
+        for (SHStatus *status in statuses) {
+            SHStatusFrame *sFrame = [[SHStatusFrame alloc] init];
+            sFrame.status = status;
+            [self.statusFrames addObject:sFrame];
+        }
+        
+        [self.tableView reloadData];
+    } failure:^(NSError * _Nonnull err) {
+        NSLog(@"服务器数据出错");
+    }];
+}
+
+#pragma mark - 微博刷新提示条
+-(void)showStatusCount:(int)count {
+    CGFloat barH = 35;
+    
+    CGFloat x = 0;
+    CGFloat y = CGRectGetMaxY(self.navigationController.navigationBar.frame) - barH;
+    CGFloat w = self.view.bounds.size.width;
+    CGFloat h = barH;
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.frame =  CGRectMake(x, y, w, h);
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    
+    if (count) {    // 有新数据
+        label.text = [NSString stringWithFormat:@"更新%d条微博",count];
+    } else {        // 没有新数据
+        label.font = [UIFont systemFontOfSize:12];
+        label.text = [NSString stringWithFormat:@"暂时没有数据了..."];
+    };
+    
+    // 插入导航控制器下导航条下面
+    [self.navigationController.view insertSubview:label belowSubview:self.navigationController.navigationBar];
+    
+    // 动画往下面平移
+    [UIView animateWithDuration:0.25 animations:^{
+        label.transform = CGAffineTransformMakeTranslation(0, barH);
+        
+    } completion:^(BOOL finished) {
+        // 下移动画完成后，往上面平移
+        [UIView animateWithDuration:0.5 delay:2 options:UIViewAnimationOptionCurveLinear animations:^{
+            label.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [label removeFromSuperview];
+        }];
+    }];
 }
 @end
